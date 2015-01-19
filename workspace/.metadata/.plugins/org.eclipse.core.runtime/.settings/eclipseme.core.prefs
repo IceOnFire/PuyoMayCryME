@@ -1,0 +1,6 @@
+#Sat Nov 29 12:51:36 CET 2008
+preverify_config_value=CLDC-1.0
+proguard_dir=/home/ice/programmi/proguard4.3beta1
+wtk_root=/opt/WTK2.5.2
+eclipse.preferences.version=1
+auto_launch_migration=false

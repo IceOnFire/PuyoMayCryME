@@ -1,0 +1,16 @@
+package it.ice.game;
+
+public abstract class Form {
+
+	protected Form() {
+		super();
+	}
+
+	protected abstract void activate();
+
+	protected abstract void update();
+
+	protected abstract void dispose();
+
+	public abstract Object getAvatar();
+}

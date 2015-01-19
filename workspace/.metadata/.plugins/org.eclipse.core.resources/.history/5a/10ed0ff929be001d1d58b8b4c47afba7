@@ -1,0 +1,5 @@
+package it.ice.puyomaycry.forms;
+
+public interface FormConstants {
+
+}

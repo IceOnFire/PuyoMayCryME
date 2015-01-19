@@ -1,0 +1,15 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+import it.ice.game.Entity;
+import it.ice.puyomaycry.states.States;
+
+public class NasceAction extends Action {
+	public NasceAction(Entity entity) {
+		super(entity);
+	}
+
+	protected void run() {
+		entity.setActiveState(States.NASCE);
+	}
+}

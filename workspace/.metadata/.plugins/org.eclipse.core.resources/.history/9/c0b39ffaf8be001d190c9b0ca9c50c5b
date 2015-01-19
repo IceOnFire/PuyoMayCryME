@@ -1,0 +1,5 @@
+package it.ice.puyomaycry.properties;
+
+public interface Properties {
+
+}

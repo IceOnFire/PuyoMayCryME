@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.microedition.midlet.MIDlet"/>
+<fullyQualifiedTypeName name="javax.microedition.lcdui.game.GameCanvas"/>
+<fullyQualifiedTypeName name="javax.microedition.lcdui.CommandListener"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.PuyoMayCryGame"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.PuyoMayCryBuilder"/>
+<fullyQualifiedTypeName name="javax.microedition.lcdui.game.Sprite"/>
+<fullyQualifiedTypeName name="javax.microedition.lcdui.Image"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.entities.PuyoMayCryGame"/>
+<fullyQualifiedTypeName name="javax.microedition.lcdui.game.LayerManager"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.actions.FlipAction"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.PuyoMayCryController"/>
+<fullyQualifiedTypeName name="it.ice.game.StateConstants"/>
+<fullyQualifiedTypeName name="java.util.Hashtable"/>
+<fullyQualifiedTypeName name="javax.microedition.lcdui.Command"/>
+<fullyQualifiedTypeName name="it.ice.game.Action"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.states.AffettoState"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.actions.CoccolaAction"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.states.PuyoState"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.forms.J2MEForm"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.forms.FormConstants"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.states.AnimationState"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.PMCController"/>
+<fullyQualifiedTypeName name="it.ice.game.Stateful"/>
+<fullyQualifiedTypeName name="com.sun.midp.io.Properties"/>
+<fullyQualifiedTypeName name="it.ice.game.State"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.states.ForwardState"/>
+<fullyQualifiedTypeName name="it.ice.game.Property"/>
+<fullyQualifiedTypeName name="it.ice.game.EventListener"/>
+<fullyQualifiedTypeName name="it.ice.game.Form"/>
+<fullyQualifiedTypeName name="com.sun.midp.lcdui.Events"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.states.States"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.actions.Actions"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.properties.PuyoProperty"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="it.ice.game.EventConstants"/>
+<fullyQualifiedTypeName name="it.ice.game.PropertyListener"/>
+<fullyQualifiedTypeName name="it.ice.puyomaycry.properties.Properties"/>
+</qualifiedTypeNameHistroy>

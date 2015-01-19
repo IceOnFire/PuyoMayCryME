@@ -1,0 +1,19 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+import it.ice.game.State;
+
+public class FlipAction extends Action {
+	private boolean forward;
+
+	public FlipAction(State agent) {
+		super(agent);
+		
+	}
+
+	protected void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

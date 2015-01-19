@@ -1,0 +1,5 @@
+package it.ice.game;
+
+public interface EventConstants {
+
+}

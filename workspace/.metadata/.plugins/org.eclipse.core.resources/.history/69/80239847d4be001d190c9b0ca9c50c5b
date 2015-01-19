@@ -1,0 +1,12 @@
+package it.ice.puyomaycry.entities;
+
+import it.ice.game.Entity;
+import it.ice.game.Event;
+
+public class Game extends Entity {
+	public final static int PUYO = 0;
+	public void onEvent(Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+}

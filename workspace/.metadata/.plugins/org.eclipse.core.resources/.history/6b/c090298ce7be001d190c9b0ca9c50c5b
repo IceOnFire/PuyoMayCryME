@@ -1,0 +1,11 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Entity;
+import it.ice.game.State;
+
+public class CoccolaState extends State {
+	public CoccolaState(Entity entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+}

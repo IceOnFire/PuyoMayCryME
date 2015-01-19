@@ -1,0 +1,24 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Event;
+import it.ice.game.EventConstants;
+import it.ice.game.EventListener;
+import it.ice.game.State;
+import it.ice.game.Stateful;
+
+import javax.microedition.lcdui.game.Sprite;
+
+public class AvantiState extends State implements EventListener {
+	public AvantiState(Stateful stateful) {
+		super(stateful);
+	}
+
+	public void onEvent(Event event) {
+		if (event.getId() == EventConstants.ANIMATION_END) {
+			Form form = (Form) stateful;
+			Sprite avatar = (Sprite) form.getAvatar();
+			avatar.setTransform(Sprite.TRANS_MIRROR);
+			form.setActiveState(States.INDIETRO);
+		}
+	}
+}

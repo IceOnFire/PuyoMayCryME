@@ -1,0 +1,7 @@
+package it.ice.puyomaycry;
+
+import it.ice.game.Entity;
+
+public class PuyoMayCryGame extends Entity {
+
+}

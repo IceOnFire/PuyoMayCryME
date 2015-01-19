@@ -1,0 +1,13 @@
+package it.ice.game;
+
+public abstract class State {
+	protected Form form;
+
+	public void setForm(Form form) {
+		this.form = form;
+	}
+
+	public abstract void activate();
+	public abstract void update();
+	public abstract void dispose();
+}

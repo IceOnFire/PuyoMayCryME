@@ -1,0 +1,8 @@
+package it.ice.game;
+
+import java.util.Hashtable;
+
+public abstract class Stateful {
+	private Hashtable states;
+	protected State activeState;
+}

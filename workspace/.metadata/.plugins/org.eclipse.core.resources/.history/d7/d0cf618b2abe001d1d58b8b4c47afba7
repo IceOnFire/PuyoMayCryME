@@ -1,0 +1,55 @@
+package it.ice.puyomaycry.forms;
+
+import it.ice.game.Form;
+import it.ice.puyomaycry.PuyoMayCryController;
+
+import javax.microedition.lcdui.Image;
+import javax.microedition.lcdui.game.Sprite;
+
+public class J2MEForm extends Form {
+	private Sprite avatar;
+
+	public J2MEForm(int id, int frameWidth, int frameHeight) {
+		super();
+		Image image = PuyoMayCryController.getInstance().getImage(id);
+		avatar = new Sprite(image, frameWidth, frameHeight);
+		avatar.defineReferencePixel(frameWidth / 2, frameHeight / 2);
+	}
+
+	public Object getAvatar() {
+		return avatar;
+	}
+
+	public int getHeight() {
+		return avatar.getHeight();
+	}
+
+	public int getWidth() {
+		return avatar.getWidth();
+	}
+
+	public int getX() {
+		return avatar.getRefPixelX();
+	}
+
+	public int getY() {
+		return avatar.getRefPixelY();
+	}
+
+	public void move(int dx, int dy) {
+		avatar.move(dx, dy);
+	}
+
+	public void place(int x, int y) {
+		avatar.setRefPixelPosition(x, y);
+	}
+
+	public void render() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void update() {
+		avatar.nextFrame();
+	}
+}

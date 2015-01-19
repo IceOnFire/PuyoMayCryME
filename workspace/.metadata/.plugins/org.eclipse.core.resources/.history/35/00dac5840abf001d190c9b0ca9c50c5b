@@ -1,0 +1,22 @@
+package it.ice.puyomaycry.forms;
+
+import it.ice.puyomaycry.states.States;
+
+import java.io.IOException;
+
+import javax.microedition.lcdui.game.Sprite;
+
+public class PuyoForm extends J2MEForm {
+	public PuyoForm(int id) throws IOException {
+		super(id, 64, 64);
+	}
+
+	public void update() {
+		super.update();
+		if (avatar.getFrame() <= 0 || avatar.getFrame() >= avatar.getFrameSequenceLength() - 1) {
+			avatar.setTransform(Sprite.TRANS_NONE);
+//			setActiveState(States.AVANTI);
+		}
+	}
+
+}

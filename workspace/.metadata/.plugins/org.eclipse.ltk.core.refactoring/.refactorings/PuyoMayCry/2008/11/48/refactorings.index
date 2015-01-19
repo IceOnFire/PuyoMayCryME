@@ -1,0 +1,113 @@
+1227962608492	Rename local variable 'arg0'
+1227963020444	Rename compilation unit 'PuyoMayCryGame.java'
+1227963575118	Rename type 'PuyoMayCryGameEntity'
+1227964783298	Move compilation unit
+1227968104364	Delete element
+1227975743478	Rename local variable 'defaultState'
+1227975757064	Rename local variable 'defaultForm'
+1227975961764	Rename local variable 'backwardavatar'
+1227977084900	Rename method 'switchAnimStates'
+1227977499800	Rename local variable 'defaultState'
+1227978245813	Delete element
+1227998558186	Delete element
+1227999270712	Rename type 'PuyoMayCryGame'
+1227999294131	Rename type 'PuyoMayCryMIDlet'
+1227999302413	Rename type 'PuyoMayCryBuilder'
+1227999310218	Rename type 'PuyoMayCryCanvas'
+1227999320874	Rename type 'PuyoMayCryController'
+1228042675968	Rename field 'BEING_BORN'
+1228044501935	Delete element
+1228044757250	Copy compilation unit
+1228045354717	Rename method 'enableState'
+1228045371538	Copy compilation unit
+1228045397300	Rename type 'BackwardState'
+1228045483470	Delete elements
+1228051143471	Rename method 'getAvailableState'
+1228053758937	Delete element
+1228053788721	Copy compilation unit
+1228054151494	Rename field 'DEFAULT_AFFETTO'
+1228054174228	Rename type 'PuyoState'
+1228054188167	Rename type 'AffettoState'
+1228054191693	Delete element
+1228054202297	Rename field 'DEFAULT_AFFETTO'
+1228054208410	Rename field 'maxAffetto'
+1228054214169	Rename field 'affetto'
+1228054327322	Copy compilation unit
+1228055789895	Rename type 'FormConstants'
+1228058226579	Rename field 'availableStates'
+1228059558951	Rename type 'State'
+1228059572197	Copy compilation unit
+1228060159205	Rename local variable 'entityState'
+1228060178386	Rename local variable 'entityState'
+1228060215390	Rename method 'setState'
+1228060394699	Rename local variable 'forwardState'
+1228060402299	Rename local variable 'backwardState'
+1228060554653	Copy compilation unit
+1228060942443	Rename type 'EntityState'
+1228060975798	Delete element
+1228060992462	Rename type 'PuyoState'
+1228061142287	Rename method 'removechild'
+1228061154256	Rename local variable 'entityId'
+1228061159394	Rename local variable 'entity'
+1228061170445	Rename local variable 'entityId'
+1228061177132	Rename local variable 'entityId'
+1228061218715	Move compilation unit
+1228061226343	Move compilation unit
+1228061293070	Rename local variable 'ciboState'
+1228061359160	Delete element
+1228061372536	Rename type 'FormState'
+1228061901659	Rename local variable 'defaultForm'
+1228062388639	Rename local variable 'child'
+1228065954850	Rename type 'NutriAction'
+1228065962816	Rename local variable 'nutriAction'
+1228067353674	Copy compilation unit
+1228067659763	Rename type 'State'
+1228067862417	Rename local variable 'formState'
+1228068643787	Delete elements
+1228069135506	Copy compilation unit
+1228069144609	Rename type 'ForwardState'
+1228069152674	Rename type 'BackwardState'
+1228081940936	Delete element
+1228082629240	Delete element
+1228082632225	Delete elements
+1228083045130	Rename local variable 'nasceState'
+1228083051769	Rename local variable 'idleState'
+1228083058930	Rename local variable 'coccolaState'
+1228083065202	Rename local variable 'arrabbiatoState'
+1228083071306	Rename local variable 'mangiaState'
+1228083085047	Rename local variable 'nasce'
+1228083090123	Rename local variable 'coccola'
+1228083099835	Rename local variable 'arrabbiato'
+1228083105983	Rename local variable 'mangia'
+1228083113168	Rename local variable 'nasceAction'
+1228083118727	Rename local variable 'coccolaAction'
+1228083124417	Rename local variable 'mangiaAction'
+1228083155690	Rename local variable 'idle'
+1228083162390	Rename local variable 'idleForm'
+1228083314106	Copy compilation unit
+1228083338953	Copy compilation unit
+1228083725473	Rename local variable 'nasceForm'
+1228083736003	Rename local variable 'avantiForm'
+1228083748263	Rename local variable 'indietroForm'
+1228083758867	Rename local variable 'coccolaForm'
+1228083770390	Rename local variable 'arrabbiatoForm'
+1228083781348	Rename local variable 'mangiaForm'
+1228083837398	Rename field 'NASCE'
+1228083841928	Rename field 'MANGIA'
+1228083848511	Rename field 'ARRABBIATO'
+1228083855654	Rename field 'COCCOLA'
+1228083940592	Rename field 'entity'
+1228083949407	Rename local variable 'entity'
+1228084778700	Rename method 'addEventListener'
+1228084828354	Copy compilation unit
+1228085143899	Rename field 'decreaseTime'
+1228086388723	Rename local variable 'vaiAvanti'
+1228086392419	Rename local variable 'vaiIndietro'
+1228086560620	Rename local variable 'entity'
+1228086568360	Rename local variable 'entity'
+1228086576882	Rename local variable 'entity'
+1228086581544	Rename local variable 'nasce'
+1228086593119	Rename local variable 'entity'
+1228086605319	Rename local variable 'entity'
+1228086614313	Rename local variable 'affetto'
+1228087045710	Delete element

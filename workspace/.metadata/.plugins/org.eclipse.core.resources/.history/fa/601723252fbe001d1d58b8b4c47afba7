@@ -1,0 +1,6 @@
+package it.ice.puyomaycry.forms;
+
+public interface FormConstants {
+	public final static int BACKGROUND = 0;
+	public final static String BACKGROUND_PATH = "/img/background.png";
+}

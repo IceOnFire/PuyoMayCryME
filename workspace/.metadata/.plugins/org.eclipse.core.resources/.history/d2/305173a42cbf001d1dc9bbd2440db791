@@ -1,0 +1,15 @@
+package it.ice.puyomaycry.entities;
+
+import com.sun.midp.lcdui.Events;
+
+import it.ice.game.Entity;
+import it.ice.game.Event;
+
+public class Puyo extends Entity {
+
+	public void onEvent(Event event) {
+		if (event == Events.ANIMATION_END) {
+			
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package it.ice.game;
+
+import java.util.Hashtable;
+import java.util.Vector;
+
+public abstract class Stateful {
+
+	protected Stateful() {
+		
+	}
+
+	
+}

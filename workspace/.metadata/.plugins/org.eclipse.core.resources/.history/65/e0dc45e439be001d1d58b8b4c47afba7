@@ -1,0 +1,73 @@
+package it.ice.puyomaycry;
+
+import it.ice.puyomaycry.entities.PuyoMayCryGame;
+
+import java.io.IOException;
+
+import javax.microedition.lcdui.Command;
+import javax.microedition.lcdui.CommandListener;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Displayable;
+import javax.microedition.lcdui.Image;
+import javax.microedition.lcdui.game.LayerManager;
+
+public class PuyoMayCryController extends LayerManager implements
+		CommandListener {
+	private static PuyoMayCryController singleton;
+
+	private PuyoMayCryMIDlet midlet;
+	private PuyoMayCryCanvas canvas;
+	private PuyoMayCryBuilder builder;
+	private PuyoMayCryGame game;
+	private Command exitCommand;
+
+	public static void init(PuyoMayCryMIDlet midlet) {
+		if (singleton == null) {
+			singleton = new PuyoMayCryController(midlet);
+		}
+	}
+
+	public static PuyoMayCryController getInstance() {
+		return singleton;
+	}
+
+	private PuyoMayCryController(PuyoMayCryMIDlet midlet) {
+		super();
+		this.midlet = midlet;
+		this.canvas = new PuyoMayCryCanvas();
+		exitCommand = new Command("Esci", Command.EXIT, 1);
+		canvas.addCommand(exitCommand);
+		canvas.setCommandListener(this);
+		setViewWindow(canvas.getWidth()>>1 - 32, canvas.getHeight()>>1, 64, 64);
+		builder = new PuyoMayCryBuilder();
+	}
+
+	public void run() throws IOException {
+		createGame(builder);
+		game = builder.getGame();
+
+		Display.getDisplay(midlet).setCurrent(canvas);
+		Thread animation = new Thread(canvas);
+		animation.start();
+	}
+
+	private void createGame(PuyoMayCryBuilder builder) throws IOException {
+		builder.buildGame();
+		builder.buildPuyo();
+	}
+
+	public PuyoMayCryGame getGame() {
+		return game;
+	}
+
+	public Image getImage(int id) throws IOException {
+		return builder.getImage(id);
+	}
+
+	public void commandAction(Command command, Displayable displayable) {
+		if (command == exitCommand) {
+			midlet.destroyApp(true);
+			midlet.notifyDestroyed();
+		}
+	}
+}

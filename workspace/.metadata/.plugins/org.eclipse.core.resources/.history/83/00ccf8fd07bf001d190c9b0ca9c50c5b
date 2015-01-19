@@ -1,0 +1,32 @@
+package it.ice.game;
+
+public class EntityState {
+	protected Form form;
+
+	public void setForm(Form form) {
+		this.form = form;
+	}
+
+	public void activate() {
+		if (form != null) {
+			form.activate();
+		}
+	}
+
+	public void update() {
+		if (form != null) {
+			form.update();
+		}
+	}
+
+	public void dispose() {
+		if (form != null) {
+			form.dispose();
+		}
+	}
+
+	public void onEvent(Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,11 @@
+package it.ice.puyomaycry.forms;
+
+public interface FormConstants {
+	public final static int BACKGROUND = 0;
+	public final static int PUYO_NASCE = 1;
+	public final static int PUYO_DEFAULT = 2;
+
+	public final static String BACKGROUND_PATH = "/img/background.png";
+	public final static String PUYO_NASCE_PATH = "/img/puyo_nasce.png";
+	public final static String PUYO_DEFAULT_PATH = "/img/puyo_default.png";
+}

@@ -1,0 +1,11 @@
+package it.ice.puyomaycry.actions;
+
+public interface Actions {
+	public final static int NASCE = 0;
+	public final static int VA_AVANTI = 1;
+	public final static int VA_INDIETRO = 2;
+	public final static int COCCOLA = 3;
+	public final static int MANGIA = 4;
+
+	public final static int DIMINUISCE_AFFETTO = -1;
+}

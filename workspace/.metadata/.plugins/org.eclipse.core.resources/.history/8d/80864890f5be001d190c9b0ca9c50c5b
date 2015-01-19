@@ -1,0 +1,45 @@
+package it.ice.game;
+
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public abstract class Stateful {
+	private Hashtable states;
+	protected EntityState activeState;
+
+	protected Stateful() {
+		states = new Hashtable();
+	}
+
+	public void addState(int stateId, EntityState entityState) {
+		states.put(new Integer(stateId), entityState);
+	}
+
+	public void removeState(int stateId) {
+		states.remove(new Integer(stateId));
+	}
+
+	public EntityState getState(int stateId) {
+		return (EntityState) states.get(new Integer(stateId));
+	}
+
+	public EntityState getActiveState() {
+		return activeState;
+	}
+
+	public void setState(int stateId) {
+		if (activeState != null) {
+			activeState.dispose();
+		}
+		activeState = (EntityState) states.get(new Integer(stateId));
+		activeState.activate();
+	}
+
+	public void update() {
+		Enumeration states = this.states.elements();
+		while (states.hasMoreElements()) {
+			EntityState entityState = (EntityState) states.nextElement();
+			entityState.update();
+		}
+	}
+}

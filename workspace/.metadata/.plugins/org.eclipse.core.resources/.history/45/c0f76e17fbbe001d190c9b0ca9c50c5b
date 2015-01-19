@@ -1,0 +1,19 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Event;
+import it.ice.game.EventConstants;
+import it.ice.game.Form;
+import it.ice.game.State;
+
+public class AnimationState extends State {
+	public AnimationState(Form form) {
+		super();
+		setForm(form);
+	}
+
+	public void onEvent(Event event) {
+		if (event.getId() == EventConstants.ANIMATION_END) {
+			form.setActiveState(States.AVANTI);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Entity;
+import it.ice.game.Event;
+import it.ice.game.State;
+
+public class ForwardState extends State {
+	public ForwardState(Entity entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void onEvent(Event event) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

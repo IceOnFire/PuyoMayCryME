@@ -1,0 +1,19 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+import it.ice.game.Entity;
+import it.ice.puyomaycry.properties.PuyoProperty;
+import it.ice.puyomaycry.states.States;
+
+public class NutriAction extends Action {
+	public NutriAction(Entity entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
+	protected void run() {
+		PuyoProperty affetto = (PuyoProperty) entity.getState(States.CIBO);
+		affetto.increase();
+		entity.setActiveState(States.MANGIA);
+	}
+}

@@ -1,0 +1,19 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Event;
+import it.ice.game.EventConstants;
+import it.ice.game.Form;
+import it.ice.game.State;
+
+public class ForwardState extends AnimationState {
+	public ForwardState(Form form) {
+		super(form);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void onEvent(Event event) {
+		if (event.getId() == EventConstants.ANIMATION_END) {
+			form.setActiveState(States.INDIETRO);
+		}
+	}
+}

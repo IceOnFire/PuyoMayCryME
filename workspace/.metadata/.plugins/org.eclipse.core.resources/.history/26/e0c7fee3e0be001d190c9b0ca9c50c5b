@@ -1,0 +1,99 @@
+package it.ice.puyomaycry;
+
+import it.ice.game.Entity;
+import it.ice.puyomaycry.entities.Game;
+import it.ice.puyomaycry.states.PuyoState;
+
+import java.io.IOException;
+
+import javax.microedition.lcdui.Command;
+import javax.microedition.lcdui.CommandListener;
+import javax.microedition.lcdui.Display;
+import javax.microedition.lcdui.Displayable;
+import javax.microedition.lcdui.Graphics;
+import javax.microedition.lcdui.Image;
+import javax.microedition.lcdui.game.LayerManager;
+
+public class PMCController extends LayerManager implements
+		CommandListener {
+	private static PMCController singleton;
+
+	private PMCMIDlet midlet;
+	private PMCCanvas canvas;
+	private PMCBuilder builder;
+	private Entity game;
+	private Command exitCommand;
+	private Command coccolaCommand;
+	private Command mangiaCommand;
+
+	public static void init(PMCMIDlet midlet) {
+		if (singleton == null) {
+			singleton = new PMCController(midlet);
+		}
+	}
+
+	public static PMCController getInstance() {
+		return singleton;
+	}
+
+	private PMCController(PMCMIDlet midlet) {
+		super();
+		this.midlet = midlet;
+		canvas = new PMCCanvas();
+
+		exitCommand = new Command("Esci", Command.EXIT, 1);
+		canvas.addCommand(exitCommand);
+
+		coccolaCommand = new Command("Coccola", Command.ITEM, 1);
+		canvas.addCommand(coccolaCommand);
+
+		mangiaCommand = new Command("Mangia", Command.ITEM, 1);
+		canvas.addCommand(mangiaCommand);
+
+		canvas.setCommandListener(this);
+		builder = new PMCBuilder();
+	}
+
+	public void paint(Graphics g, int x, int y) {
+		super.paint(g, (canvas.getWidth() >> 1) - 32,
+				(canvas.getHeight() >> 1) - 32);
+	}
+
+	public void run() throws IOException {
+		createGame(builder);
+		game = builder.getGame();
+
+		Display.getDisplay(midlet).setCurrent(canvas);
+		Thread animation = new Thread(canvas);
+		animation.start();
+	}
+
+	private void createGame(PMCBuilder builder) throws IOException {
+		builder.buildGame();
+		builder.buildPuyo();
+	}
+
+	public Entity getGame() {
+		return game;
+	}
+
+	public Image getImage(int id) throws IOException {
+		return builder.getImage(id);
+	}
+
+	public void manageEvent(int keyStates) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void commandAction(Command command, Displayable displayable) {
+		if (command == exitCommand) {
+			midlet.destroyApp(true);
+			midlet.notifyDestroyed();
+		} else if (command == coccolaCommand) {
+			game.getChild(Game.PUYO).setState(PuyoState.COCCOLA);
+		} else if (command == mangiaCommand) {
+			game.getChild(Game.PUYO).setState(PuyoState.MANGIA);
+		}
+	}
+}

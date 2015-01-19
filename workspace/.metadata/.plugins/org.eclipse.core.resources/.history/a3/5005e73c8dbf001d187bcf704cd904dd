@@ -1,0 +1,51 @@
+package it.ice.puyomaycry.entities;
+
+import it.ice.game.Entity;
+import it.ice.game.Event;
+import it.ice.game.EventConstants;
+import it.ice.game.Property;
+import it.ice.puyomaycry.actions.Actions;
+import it.ice.puyomaycry.properties.Properties;
+import it.ice.puyomaycry.states.States;
+
+public class Puyo extends Entity {
+	public void onPropertyChange(Property property) {
+		if (property == getProperty(Properties.AFFETTO)) {
+			Integer affetto = (Integer) property.getValue();
+			if (affetto.intValue() <= 0) {
+				setActiveState(States.ARRABBIANTE);
+			}
+		} else if (property == getProperty(Properties.CIBO)) {
+			Integer cibo = (Integer) property.getValue();
+			if (cibo.intValue() <= 0) {
+				setActiveState(States.AFFAMATO);
+			}
+		}
+	}
+
+	public void onEvent(Event event) {
+		if (event.getId() == EventConstants.ANIMATION_END) {
+			if (activeState == getState(States.NASCENTE)) {
+				enableAction(Actions.VA_AVANTI);
+			} else if (activeState == getState(States.AVANTI)) {
+				enableAction(Actions.VA_INDIETRO);
+			} else if (activeState == getState(States.INDIETRO)) {
+				enableAction(Actions.VA_AVANTI);
+			} else if (activeState == getState(States.COCCOLANTE)
+					|| activeState == getState(States.MANGIANTE)) {
+				Integer affetto = (Integer) getProperty(Properties.AFFETTO)
+						.getValue();
+				// int cibo = ((PuyoProperty) getProperty(Properties.CIBO))
+				// .getAmount();
+
+				if (affetto.intValue() <= 0) {
+					setActiveState(States.ARRABBIANTE);
+					// } else if (cibo <= 0) {
+					// setActiveState(States.NASCENTE);
+				} else {
+					enableAction(Actions.VA_AVANTI);
+				}
+			}
+		}
+	}
+}

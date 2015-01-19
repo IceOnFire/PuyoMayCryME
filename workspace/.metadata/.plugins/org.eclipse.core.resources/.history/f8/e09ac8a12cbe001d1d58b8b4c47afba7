@@ -1,0 +1,11 @@
+package it.ice.puyomaycry.entities;
+
+import it.ice.game.Entity;
+
+import javax.microedition.lcdui.Graphics;
+
+public class PuyoMayCryGame extends Entity {
+	public void render(Graphics g) {
+		currentState.render(g);
+	}
+}

@@ -1,0 +1,21 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Entity;
+import it.ice.game.Event;
+import it.ice.game.EventConstants;
+import it.ice.game.EventListener;
+import it.ice.game.Form;
+import it.ice.game.State;
+
+public class AnimationState extends State implements EventListener {
+	public AnimationState(Entity entity, Form form) {
+		super(entity);
+		form.addEventListener(this);
+	}
+
+	public void onEvent(Event event) {
+		if (event.getId() == EventConstants.ANIMATION_END) {
+			entity.setActiveState(States.IDLE);
+		}
+	}
+}

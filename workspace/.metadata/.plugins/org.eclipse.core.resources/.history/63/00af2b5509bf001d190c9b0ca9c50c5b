@@ -1,0 +1,39 @@
+package it.ice.game;
+
+public class EntityState extends State {
+//	public void activate() {
+//		if (form != null) {
+//			form.activate();
+//		}
+//	}
+//
+//	public void update() {
+//		if (form != null) {
+//			form.update();
+//		}
+//	}
+//
+//	public void dispose() {
+//		if (form != null) {
+//			form.dispose();
+//		}
+//	}
+
+	public void activate() {
+		form.getActiveState().activate();
+	}
+
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void dispose() {
+		form.getActiveState().dispose();
+	}
+
+	public void onEvent(Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,20 @@
+package it.ice.game;
+
+public class EntityState extends State implements EventListener {
+	protected Entity entity;
+	private Form form;
+
+	public EntityState(Entity entity) {
+		this.entity = entity;
+	}
+
+	public void setForm(Form form) {
+		this.form = form;
+		form.addEventListener(this);
+	}
+
+	public void onEvent(Event event) {
+		// TODO Auto-generated method stub
+
+	}
+}

@@ -1,0 +1,9 @@
+package it.ice.game;
+
+public class FormState extends State {
+	protected Form form;
+
+	public FormState(Form form) {
+		this.form = form;
+	}
+}

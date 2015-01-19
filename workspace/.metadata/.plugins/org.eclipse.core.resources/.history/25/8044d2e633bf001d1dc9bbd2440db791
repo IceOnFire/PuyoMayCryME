@@ -1,0 +1,17 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+import it.ice.game.Entity;
+
+public class DiminuisceProprietaAction extends Action {
+	public DiminuisceProprietaAction(Entity agent) {
+		super(agent);
+		// TODO Auto-generated constructor stub
+	}
+
+	protected void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

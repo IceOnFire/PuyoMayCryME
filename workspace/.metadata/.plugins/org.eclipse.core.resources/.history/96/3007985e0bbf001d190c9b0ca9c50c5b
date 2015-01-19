@@ -1,0 +1,21 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Event;
+import it.ice.game.EventConstants;
+import it.ice.game.Form;
+
+import javax.microedition.lcdui.game.Sprite;
+
+public class ForwardState extends AnimationState {
+	public ForwardState(Form form) {
+		super(form);
+	}
+
+	public void onEvent(Event event) {
+		if (event.getId() == EventConstants.ANIMATION_END) {
+			Sprite avatar = (Sprite) form.getAvatar();
+			avatar.setTransform(Sprite.TRANS_MIRROR);
+			form.setActiveState(States.INDIETRO);
+		}
+	}
+}

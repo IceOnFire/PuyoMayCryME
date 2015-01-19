@@ -1,0 +1,41 @@
+package it.ice.game;
+
+import java.util.Vector;
+
+public abstract class Form extends Stateful {
+	private Vector listeners;
+
+	protected Form() {
+		super();
+		listeners = new Vector();
+	}
+
+	public State getActiveState() {
+		return activeState;
+	}
+
+	public void setActiveState(int stateId) {
+		if (activeState != null) {
+			activeState.dispose();
+		}
+		activeState = (State) states.get(new Integer(stateId));
+		activeState.activate();
+	}
+
+	public void addEventListener(EventListener listener) {
+		listeners.addElement(listener);
+	}
+
+	protected void notifyEvent(Event event) {
+		for (int i = 0; i < listeners.size(); i++) {
+			EventListener listener = (EventListener) listeners.elementAt(i);
+			listener.onEvent(event);
+		}
+	}
+
+	protected abstract void activate();
+
+	protected abstract void dispose();
+
+	public abstract Object getAvatar();
+}

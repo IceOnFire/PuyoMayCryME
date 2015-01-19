@@ -1,0 +1,14 @@
+package it.ice.game;
+
+import java.util.Vector;
+
+public abstract class Form {
+	private Vector listeners;
+
+	protected Form() {
+		listeners = new Vector();
+	}
+
+	protected abstract void update();
+	public abstract Object getAvatar();
+}

@@ -1,0 +1,20 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+import it.ice.game.Entity;
+import it.ice.puyomaycry.properties.Properties;
+import it.ice.puyomaycry.properties.PuyoProperty;
+import it.ice.puyomaycry.states.States;
+
+public class MangiaAction extends Action {
+	public MangiaAction(Entity entity) {
+		super(entity);
+	}
+
+	protected void run() {
+		PuyoProperty affetto = (PuyoProperty) agent
+				.getProperty(Properties.CIBO);
+		affetto.increase();
+		agent.setActiveState(States.MANGIANTE);
+	}
+}

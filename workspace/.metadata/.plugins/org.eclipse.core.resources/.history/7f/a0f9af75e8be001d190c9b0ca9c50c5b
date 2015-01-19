@@ -1,0 +1,33 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Entity;
+import it.ice.game.State;
+
+public class CiboState extends State {
+	private final static int DEFAULT_AFFETTO = 5;
+
+	private int maxAffetto;
+	private int affetto;
+
+	public CiboState(Entity entity) {
+		super(entity);
+		maxAffetto = DEFAULT_AFFETTO;
+		affetto = maxAffetto;
+	}
+
+	public int getAmount() {
+		return affetto;
+	}
+
+	public void increase() {
+		if (affetto < maxAffetto) {
+			affetto++;
+		}
+	}
+
+	public void decrease() {
+		if (affetto > 0) {
+			affetto--;
+		}
+	}
+}

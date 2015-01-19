@@ -1,0 +1,25 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Event;
+import it.ice.game.EventConstants;
+import it.ice.game.EventListener;
+import it.ice.game.Form;
+import it.ice.game.State;
+import it.ice.game.Stateful;
+
+import javax.microedition.lcdui.game.Sprite;
+
+public class AnimationState extends State implements EventListener {
+	public AnimationState(Stateful stateful, Form form) {
+		super(stateful);
+		form.addEventListener(this);
+	}
+
+	public void onEvent(Event event) {
+		if (event.getId() == EventConstants.ANIMATION_END) {
+			Sprite avatar = (Sprite) form.getAvatar();
+			avatar.setTransform(Sprite.TRANS_NONE);
+			stateful.setActiveState(States.IDLE);
+		}
+	}
+}

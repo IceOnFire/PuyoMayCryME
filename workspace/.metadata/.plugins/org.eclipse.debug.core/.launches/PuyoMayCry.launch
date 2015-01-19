@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="EclipseME.emulatorLaunchConfigurationType">
+<booleanAttribute key="eclipseme.do_jad_launch" value="false"/>
+<booleanAttribute key="eclipseme.do_ota" value="false"/>
+<stringAttribute key="eclipseme.emulated_class" value="it.ice.puyomaycry.PMCMIDlet"/>
+<stringAttribute key="eclipseme.launch_params" value=""/>
+<stringAttribute key="eclipseme.specified_jad_url" value=""/>
+<booleanAttribute key="eclipseme.use_project_device" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PuyoMayCry"/>
+</launchConfiguration>

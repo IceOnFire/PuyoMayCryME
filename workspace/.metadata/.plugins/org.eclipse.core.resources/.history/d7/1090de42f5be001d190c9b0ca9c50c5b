@@ -1,0 +1,9 @@
+package it.ice.game;
+
+public class FormState {
+	private Form form;
+
+	public FormState(Form form) {
+		this.form = form;
+	}
+}

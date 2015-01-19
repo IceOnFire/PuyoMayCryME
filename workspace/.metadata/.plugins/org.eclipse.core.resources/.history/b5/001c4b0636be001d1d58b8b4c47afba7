@@ -1,0 +1,6 @@
+package it.ice.game;
+
+public interface StateConstants {
+	public final static int FORWARD = 0;
+	public final static int BACKWARD = 1;
+}

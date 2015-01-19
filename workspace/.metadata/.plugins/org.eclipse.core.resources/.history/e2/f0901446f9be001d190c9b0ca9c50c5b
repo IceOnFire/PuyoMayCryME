@@ -1,0 +1,27 @@
+package it.ice.game;
+
+public class FormState {
+	protected Form form;
+
+	public FormState(Form form) {
+		this.form = form;
+	}
+
+	public void activate() {
+		if (form != null) {
+			form.activate();
+		}
+	}
+
+	public void update() {
+		if (form != null) {
+			form.update();
+		}
+	}
+
+	public void dispose() {
+		if (form != null) {
+			form.dispose();
+		}
+	}
+}

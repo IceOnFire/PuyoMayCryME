@@ -1,0 +1,21 @@
+package it.ice.game;
+
+import java.util.Vector;
+
+public abstract class Form {
+	private Vector listeners;
+
+	protected Form() {
+		listeners = new Vector();
+	}
+
+	private void notifyEvent(Event e) {
+		for (int i=0; i<listeners.size(); i++) {
+			FormListener listener = (FormListener) listeners.elementAt(i);
+			listeners.onEvent(e);
+		}
+	}
+
+	protected abstract void update();
+	public abstract Object getAvatar();
+}

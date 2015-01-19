@@ -1,0 +1,17 @@
+package it.ice.game;
+
+import java.util.Vector;
+
+public abstract class Form extends Stateful {
+	
+
+	protected Form() {
+		super();	
+	}
+
+	protected abstract void activate();
+
+	protected abstract void dispose();
+
+	public abstract Object getAvatar();
+}

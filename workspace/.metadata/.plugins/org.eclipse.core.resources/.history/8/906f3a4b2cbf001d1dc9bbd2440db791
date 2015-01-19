@@ -1,0 +1,7 @@
+package it.ice.puyomaycry.actions;
+
+public interface Actions {
+	public final static int NASCE = 0;
+	public final static int COCCOLA = 1;
+	public final static int MANGIA = 2;
+}

@@ -1,0 +1,12 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+
+public class DiminuisceProprietaAction extends Action {
+
+	protected void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

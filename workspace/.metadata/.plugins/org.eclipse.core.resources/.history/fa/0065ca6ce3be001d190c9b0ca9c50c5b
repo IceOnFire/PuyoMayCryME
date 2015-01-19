@@ -1,0 +1,95 @@
+package it.ice.game;
+
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public class State implements EventListener {
+	protected Entity entity;
+	private Form form;
+	protected Hashtable availableActions;
+	protected Hashtable enabledActions;
+
+	public State(Entity entity) {
+		this.entity = entity;
+		availableActions = new Hashtable();
+		enabledActions = new Hashtable();
+	}
+
+	public void setForm(Form form) {
+		this.form = form;
+		form.addEventListener(this);
+	}
+
+	public void addAction(int actionId, Action action) {
+		availableActions.put(new Integer(actionId), action);
+	}
+
+	public void enableAction(int actionId) {
+		Integer id = new Integer(actionId);
+		Object action = availableActions.remove(id);
+		enabledActions.put(id, action);
+	}
+
+	public void disableAction(int actionId) {
+		Integer id = new Integer(actionId);
+		Object action = enabledActions.remove(id);
+		availableActions.put(id, action);
+	}
+
+	public void runAction(Object actionId) {
+		Action action = (Action) enabledActions.get(actionId);
+		action.run();
+		if (!action.isPersistent()) {
+//			action.dispose();
+			disableAction(actionId);
+		}
+	}
+
+	public void enableActions() {
+		Enumeration actionIds = availableActions.keys();
+		while (actionIds.hasMoreElements()) {
+			Object actionId = actionIds.nextElement();
+			enableAction(actionId);
+		}
+	}
+
+	public void disableActions() {
+		Enumeration actionIds = enabledActions.keys();
+		while (actionIds.hasMoreElements()) {
+			Object actionId = actionIds.nextElement();
+			disableAction(actionId);
+		}
+	}
+
+	public void runActions() {
+		Enumeration actionIds = enabledActions.keys();
+		while (actionIds.hasMoreElements()) {
+			Object actionId = actionIds.nextElement();
+			runAction(actionId);
+		}
+	}
+
+	public void activate() {
+		if (form != null) {
+			form.activate();
+		}
+	}
+
+	public void update() {
+		runActions();
+		if (form != null) {
+			form.update();
+		}
+	}
+
+	public void dispose() {
+		if (form != null) {
+			form.dispose();
+		}
+	}
+
+	public void onEvent(Event event) {
+		// TODO Auto-generated method stub
+
+	}
+}

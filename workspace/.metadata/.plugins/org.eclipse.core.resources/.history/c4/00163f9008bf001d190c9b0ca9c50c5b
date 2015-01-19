@@ -1,0 +1,29 @@
+package it.ice.game;
+
+public class FormState implements State, EventListener {
+	protected Form form;
+
+	protected void setForm(Form form) {
+		this.form = form;
+	}
+
+	public void activate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void dispose() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void onEvent(Event event) {
+		// TODO Auto-generated method stub
+		
+	}
+}

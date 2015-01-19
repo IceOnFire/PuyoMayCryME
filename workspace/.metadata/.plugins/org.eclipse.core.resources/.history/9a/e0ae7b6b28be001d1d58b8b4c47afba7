@@ -1,0 +1,7 @@
+package it.ice.game;
+
+public class Form {
+	private Object avatar;
+
+	
+}

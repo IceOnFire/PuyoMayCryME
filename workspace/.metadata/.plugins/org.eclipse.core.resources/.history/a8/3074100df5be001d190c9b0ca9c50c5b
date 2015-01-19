@@ -1,0 +1,55 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.Entity;
+import it.ice.game.State;
+import it.ice.puyomaycry.PMCController;
+
+public class PuyoState extends State {
+	private final static int DEFAULT_AMOUNT = 5;
+	private final static int DECREASE_TIME_MILLIS = 5000;
+	
+	private int maxAmount;
+	private int amount;
+	private int decreaseTime;
+	private int time;
+
+	public PuyoState(Entity entity) {
+		this(entity, DEFAULT_AMOUNT, DECREASE_TIME_MILLIS);
+	}
+
+	public PuyoState(Entity entity, int maxAmount, int decreaseTime) {
+		super(entity);
+		this.maxAmount = maxAmount;
+		amount = maxAmount;
+		this.decreaseTime = decreaseTime;
+		this.time = 0;
+	}
+
+	public void update() {
+		time += PMCController.MILLISECONDS_PER_TIMESTEP;
+		if (time >= decreaseTime) {
+			decrease();
+			time = 0;
+		}
+//		super.update();
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void increase() {
+		if (amount < maxAmount) {
+			amount++;
+		}
+	}
+
+	public void decrease() {
+		if (amount > 0) {
+			amount--;
+		} else {
+			entity.setState(States.ARRABBIATO);
+		}
+		System.out.println(amount);
+	}
+}

@@ -1,0 +1,7 @@
+package it.ice.puyomaycry.forms;
+
+import it.ice.game.Form;
+
+public class J2MEForm extends Form {
+
+}

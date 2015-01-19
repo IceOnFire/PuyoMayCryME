@@ -1,0 +1,13 @@
+package it.ice.game;
+
+public class Action {
+	private boolean persistent;
+
+	public boolean isPersistent() {
+		return persistent;
+	}
+
+	public void setPersistent(boolean persistent) {
+		this.persistent = persistent;
+	}
+}

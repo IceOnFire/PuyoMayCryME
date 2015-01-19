@@ -1,0 +1,5 @@
+package it.ice.puyomaycry.actions;
+
+public interface Actions {
+
+}

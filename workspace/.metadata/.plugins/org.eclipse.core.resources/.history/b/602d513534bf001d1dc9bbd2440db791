@@ -1,0 +1,19 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+import it.ice.game.Entity;
+import it.ice.puyomaycry.properties.Properties;
+import it.ice.puyomaycry.properties.PuyoProperty;
+
+public class DiminuisceProprietaAction extends Action {
+	public DiminuisceProprietaAction(int propertyId, Entity agent) {
+		super(agent);
+	}
+
+	protected void run() {
+		PuyoProperty affetto = (PuyoProperty) agent
+		.getProperty(Properties.AFFETTO);
+affetto.increase();
+	}
+
+}

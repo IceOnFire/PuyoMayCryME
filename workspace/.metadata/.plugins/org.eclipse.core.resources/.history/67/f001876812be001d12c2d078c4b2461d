@@ -1,0 +1,11 @@
+package it.ice.puyomaycry;
+
+import javax.microedition.lcdui.game.GameCanvas;
+
+public class PuyoMayCryCanvas extends GameCanvas {
+	protected PuyoMayCryCanvas() {
+		super(false);
+		// TODO Auto-generated constructor stub
+	}
+
+}

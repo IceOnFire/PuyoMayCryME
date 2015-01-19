@@ -1,0 +1,7 @@
+package it.ice.puyomaycry.states;
+
+import it.ice.game.State;
+
+public class CoccolaState extends State {
+
+}

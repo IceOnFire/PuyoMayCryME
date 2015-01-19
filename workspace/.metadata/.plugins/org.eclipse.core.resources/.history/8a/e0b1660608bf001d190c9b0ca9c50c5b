@@ -1,0 +1,9 @@
+package it.ice.game;
+
+public abstract class FormState implements EventListener {
+	protected Form form;
+
+	protected void setForm(Form form) {
+		this.form = form;
+	}
+}

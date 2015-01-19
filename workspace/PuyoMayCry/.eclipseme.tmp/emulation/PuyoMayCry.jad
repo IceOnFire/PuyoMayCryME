@@ -1,0 +1,8 @@
+MIDlet-1: PuyoMayCry,,it.ice.puyomaycry.PMCMIDlet
+MIDlet-Jar-Size: 28306
+MIDlet-Jar-URL: PuyoMayCry.jar
+MIDlet-Name: Puyo May Cry
+MIDlet-Vendor: Ice
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.1

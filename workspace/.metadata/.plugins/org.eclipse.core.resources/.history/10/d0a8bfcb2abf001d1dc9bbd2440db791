@@ -1,0 +1,7 @@
+package it.ice.puyomaycry.entities;
+
+import it.ice.game.Entity;
+
+public class Game extends Entity {
+	public final static int PUYO = 0;
+}

@@ -1,0 +1,9 @@
+package it.ice.game;
+
+public abstract class State {
+	protected abstract void activate();
+
+	protected abstract void update();
+
+	protected abstract void dispose();
+}

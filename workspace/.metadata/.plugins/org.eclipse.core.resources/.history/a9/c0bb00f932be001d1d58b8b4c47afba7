@@ -1,0 +1,22 @@
+package it.ice.game;
+
+public abstract class Action {
+	private State agent;
+	private Vector victims;
+	private boolean persistent;
+
+	public Action(State agent, Vector victims) {
+		this.agent = agent;
+		this.victims = victims;
+	}
+
+	public boolean isPersistent() {
+		return persistent;
+	}
+
+	public void setPersistent(boolean persistent) {
+		this.persistent = persistent;
+	}
+
+	protected abstract void run();
+}

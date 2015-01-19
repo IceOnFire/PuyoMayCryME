@@ -1,0 +1,25 @@
+package it.ice.puyomaycry;
+
+import javax.microedition.midlet.MIDlet;
+
+public class PuyoMayCryMIDlet extends MIDlet {
+
+	public PuyoMayCryMIDlet() {
+		// TODO Auto-generated constructor stub
+	}
+
+	protected void startApp() {
+		// TODO Auto-generated method stub
+
+	}
+
+	protected void pauseApp() {
+		// TODO Auto-generated method stub
+
+	}
+
+	protected void destroyApp(boolean unconditional) {
+		// TODO Auto-generated method stub
+
+	}
+}

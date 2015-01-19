@@ -1,0 +1,19 @@
+package it.ice.puyomaycry.actions;
+
+import it.ice.game.Action;
+import it.ice.game.Entity;
+import it.ice.puyomaycry.states.AffettoState;
+import it.ice.puyomaycry.states.States;
+
+public class CoccolaAction extends Action {
+	public CoccolaAction(Entity entity) {
+		super(entity);
+		// TODO Auto-generated constructor stub
+	}
+
+	protected void run() {
+		AffettoState affetto = (AffettoState) entity.getState(States.AFFETTO);
+		affetto.increase();
+		System.out.println(affetto);
+	}
+}

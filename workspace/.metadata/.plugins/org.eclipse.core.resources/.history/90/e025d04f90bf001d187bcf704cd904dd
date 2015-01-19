@@ -1,0 +1,13 @@
+package it.ice.puyomaycry.states;
+
+public interface States {
+	public final static int DEFAULT = 0;
+	public final static int IDLE = 1;
+	public final static int AVANTI = 2;
+	public final static int INDIETRO = 3;
+	public final static int NASCENTE = 4;
+	public final static int COCCOLANTE = 5;
+	public final static int ARRABBIATO = 6;
+	public final static int MANGIANTE = 7;
+	public final static int AFFAMATO = 8;
+}

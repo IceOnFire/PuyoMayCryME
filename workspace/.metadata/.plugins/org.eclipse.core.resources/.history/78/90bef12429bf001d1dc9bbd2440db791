@@ -1,0 +1,54 @@
+package it.ice.game;
+
+import java.util.Hashtable;
+import java.util.Vector;
+
+public abstract class Stateful {
+	protected Hashtable states;
+	protected State activeState;
+	private Vector listeners;
+
+	protected Stateful() {
+		states = new Hashtable();
+		listeners = new Vector();
+	}
+
+	public void addState(int stateId, State state) {
+		states.put(new Integer(stateId), state);
+	}
+
+	public void removeState(int stateId) {
+		states.remove(new Integer(stateId));
+	}
+
+	public State getState(int stateId) {
+		return (State) states.get(new Integer(stateId));
+	}
+
+	public State getActiveState() {
+		return activeState;
+	}
+
+	public void setActiveState(int stateId) {
+		if (activeState != null) {
+			activeState.dispose();
+		}
+		activeState = (State) states.get(new Integer(stateId));
+		activeState.activate();
+	}
+
+	public void addEventListener(EventListener listener) {
+		listeners.addElement(listener);
+	}
+
+	protected void notifyEvent(Event event) {
+		for (int i = 0; i < listeners.size(); i++) {
+			EventListener listener = (EventListener) listeners.elementAt(i);
+			listener.onEvent(event);
+		}
+	}
+
+	public void update() {
+		activeState.update();
+	}
+}

@@ -1,0 +1,72 @@
+package it.ice.game;
+
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public abstract class OldEntity implements EventListener {
+	protected Hashtable children;
+	private Hashtable availableStates;
+	protected Hashtable activeStates;
+
+	public OldEntity() {
+		children = new Hashtable();
+		availableStates = new Hashtable();
+		activeStates = new Hashtable();
+	}
+
+	public void addChild(int entityId, OldEntity entity) {
+		children.put(new Integer(entityId), entity);
+	}
+
+	public void removechild(int entityId) {
+		children.remove(new Integer(entityId));
+	}
+
+	public OldEntity getChild(int entityId) {
+		return (OldEntity) children.get(new Integer(entityId));
+	}
+
+	public void addState(int stateId, EntityState entityState) {
+		availableStates.put(new Integer(stateId), entityState);
+	}
+
+	public void removeState(int stateId) {
+		availableStates.remove(new Integer(stateId));
+	}
+
+	public EntityState getAvailableState(int stateId) {
+		return (EntityState) availableStates.get(new Integer(stateId));
+	}
+
+	public EntityState getActiveState(int stateId) {
+		return (EntityState) activeStates.get(new Integer(stateId));
+	}
+
+	public void enableState(int stateId) {
+		Integer id = new Integer(stateId);
+		EntityState entityState = (EntityState) availableStates.remove(id);
+		entityState.activate();
+		activeStates.put(id, entityState);
+	}
+
+	public void disableState(int stateId) {
+		Integer id = new Integer(stateId);
+		EntityState entityState = (EntityState) activeStates.remove(id);
+		entityState.dispose();
+		availableStates.put(id, entityState);
+	}
+
+	public void update() {
+		Enumeration states = activeStates.elements();
+		while (states.hasMoreElements()) {
+			EntityState entityState = (EntityState) states.nextElement();
+			entityState.update();
+		}
+
+		Enumeration children = this.children.elements();
+		while (children.hasMoreElements()) {
+			OldEntity child = (OldEntity) children.nextElement();
+			child.update();
+		}
+	}
+}

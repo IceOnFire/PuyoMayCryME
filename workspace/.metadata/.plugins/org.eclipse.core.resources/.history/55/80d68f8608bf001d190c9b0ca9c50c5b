@@ -1,0 +1,7 @@
+package it.ice.game;
+
+public interface State {
+	public void activate();
+	public void update();
+	public void dispose();
+}

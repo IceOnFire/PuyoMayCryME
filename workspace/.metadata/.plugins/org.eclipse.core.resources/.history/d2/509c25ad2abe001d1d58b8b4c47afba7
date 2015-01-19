@@ -1,0 +1,9 @@
+package it.ice.game;
+
+public class Form {
+	private Object avatar;
+
+	public void setAvatar(Object avatar) {
+		this.avatar = avatar;
+	}
+}

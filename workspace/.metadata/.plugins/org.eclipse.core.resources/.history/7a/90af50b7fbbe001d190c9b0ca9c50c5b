@@ -1,0 +1,11 @@
+package it.ice.game;
+
+public abstract class Property {
+	protected Entity entity;
+
+	public Property(Entity entity) {
+		this.entity = entity;
+	}
+
+	protected void update();
+}

@@ -1,0 +1,9 @@
+package it.ice.puyomaycry.forms;
+
+import java.io.IOException;
+
+public class PuyoForm extends J2MEForm {
+	public PuyoForm(int id) throws IOException {
+		super(id, 64, 64);
+	}
+}
